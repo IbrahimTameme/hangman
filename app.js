@@ -1,19 +1,20 @@
 'use strict';
 const subject = [
-    'one',
-    'two',
-    'three',
-    'four',
-    'five',
-    'six',
-    'seven',
-    'blablabla'
+    'france',
+    'italy',
+    'jordan',
+    'australia',
+    'switzerland',
+    'germany',
+    'palestine',
+    'egypt'
 ]
  let word = '';
 const maxmistakes = 6;
 let wrong = 0;
 let guessed =[];
 let wordstatue = null;
+let hint =document.getElementById('hint')
 
 ////choose the guess randomly
 function randomsubject() {
@@ -112,4 +113,33 @@ function reset()
     window.location.reload();
     // window.location = "/";
     
+}
+function hinte(){
+switch(word){
+    case'france':
+    hint.innerHTML='perfume';
+    break;
+    case'italy':
+    hint.innerHTML='pizza';
+    break;
+    case'jordan':
+    hint.innerHTML='mansaf';
+    break;
+    case'australia':
+    hint.innerHTML='kangaroo';
+    break;
+    case'switzerland':
+    hint.innerHTML='chocolate';
+    break;
+    case'germany':
+    hint.innerHTML='Hitler';
+    break;
+    case'palestine':
+    hint.innerHTML='orange country';
+    break;
+    case'egypt':
+    hint.innerHTML='Pyramids';
+    break;
+
+}
 }
