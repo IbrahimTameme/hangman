@@ -14,7 +14,10 @@ const maxmistakes = 6;
 let wrong = 0;
 let guessed =[];
 let wordstatue = null;
+
 let hint =document.getElementById('hint')
+
+
 
 ////choose the guess randomly
 function randomsubject() {
@@ -81,7 +84,10 @@ function  checkiflost()
     if(wrong === maxmistakes)
     {
         document.getElementById("wordSpotlight").innerHTML = `The word was ${word}`;
+
         document.getElementById("letters").innerHTML = "you lost!! stupide";
+
+
 
     }
 }
@@ -98,6 +104,7 @@ function gussedspace(){
     document.getElementById('wordSpotlight').innerHTML=wordstatue;
 }
 gussedspace()
+
 
 
 function updatewrong()
@@ -139,7 +146,15 @@ switch(word){
     break;
     case'egypt':
     hint.innerHTML='Pyramids';
-    break;
+    break
+}}
 
+
+
+function updatewrong()
+{
+    
+    document.getElementById("mistakes").innerHTML = wrong;
+    document.getElementById("hangmanPic").src = `./img/${wrong}.png`;
 }
-}
+
