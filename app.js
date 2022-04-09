@@ -24,7 +24,7 @@ function randomsubject() {
 //// bulit the letter buttton
 function letterbutton(){
     let letter = 'abcdefghijklmnopqrstuvwxyz'.split('').map((a)=>
-        `<button onClick='handler' class='lett'> ${a}</button>`
+        `<button onClick='handler(${a})' class='lett' id = '${a}'> ${a}</button>`
     
     ).join('')
   
